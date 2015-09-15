@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Linq;
 using AutoGetHashCode;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestAutoGetHashCode
 {
     [TestClass]
-    public class ScannerTest
+    public class SolutionScannerTest
     {
-        private SyntaxAnalyzer _syntaxAnalyzer;
-        private FileReader _fileReader;
-
+        private SolutionScanner _solutionScanner;
         [TestInitialize]
         public void SetUp()
         {
-            _fileReader = new FileReader();
-
+            _solutionScanner = new SolutionScanner(@"..\..\..\AutoGetHashCode.sln");
         }
 
         [TestMethod]
-        public void TestGenerateGetHashCode()
+        public void TestGetCompilation()
         {
+            //_solutionScanner.GetCompilation();
         }
     }
 }
